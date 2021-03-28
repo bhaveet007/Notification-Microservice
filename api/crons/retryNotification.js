@@ -7,11 +7,11 @@ import { NotificationService } from '../services'
 import { CRON_CONFIG } from '../../config'
 
 function retryNotification () {
-  const { TIME_ZONE, RON_TIME_RETRY_NOTIFICATION } = CRON_CONFIG
+  const { TIME_ZONE, CRON_TIME_RETRY_NOTIFICATION } = CRON_CONFIG
   console.log('[Task - EMAIL_REPORT] CRON_TIME_RETRY_NOTIFICATION', CRON_TIME_RETRY_NOTIFICATION)
 
   const cronOptions = {
-    cronTime: CRON_TIME_EMAIL_NOTIFICATION,
+    cronTime: CRON_TIME_RETRY_NOTIFICATION,
     onTick,
     onComplete,
     start: true,

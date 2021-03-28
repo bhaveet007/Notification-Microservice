@@ -40,6 +40,7 @@ async function sendEmail (params) {
       debug: NODEMAILER_DEBUG,
       logger: NODEMAILER_LOGGER,
       secure: false,
+      pool: true,
       auth: {
         type: 'login',
         user: SMTP_USERNAME,
@@ -59,7 +60,7 @@ async function sendEmail (params) {
     const response = await transporter.sendMail(mailOptions)
 
     const { messageId: serviceId } = response
-    const updateQuery = { _id: notificationIds }
+    const updateQuery = { _id: notificationId }
     const updateData = { status: 'SENT', serviceId }
     const updatedNotif = await NotificationModel.update(updateQuery, updateData)
     return updatedNotif
@@ -68,7 +69,7 @@ async function sendEmail (params) {
     const error = JSON.parse(JSON.stringify(e))
     const updateData = { status: 'ERROR', error }
     const updatedNotif = await NotificationModel.update(updateQuery, updateData)
-    throw new ResponseBody(500, '', undefined, updatedNotif)
+    throw new ResponseBody(500, 'Error occured while sending mail', undefined, e)
   }
 }
 

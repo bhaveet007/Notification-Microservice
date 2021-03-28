@@ -16,6 +16,17 @@ const NotificationTemplateModel = {
 const MongoModel = mongoose.model('NotificationTemplate', NotificationTemplateSchema)
 
 export default NotificationTemplateModel
+const toSave = {
+channel: "EMAIL",
+data: {
+    to: [
+        "bhaveetseekin14@gmail.com"
+    ],
+    subject: "Email Subject",
+    text: "Email Text Body",
+    html: "HI!! This is test email"
+}
+}
 
 async function Create (params) {
   try {

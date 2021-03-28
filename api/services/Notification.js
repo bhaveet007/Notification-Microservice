@@ -5,24 +5,27 @@ import { DispatchModel, NotificationTemplateModel, NotificationModel } from '../
 import { CustomError, ResponseBody } from '../helpers'
 
 const NotificationService = {
-  sendEmailNotification
+  sendEmailNotification,
+  retryNotification
 }
 
 export default NotificationService
 
-async function _getFailedNotifications() {
+async function retryNotification() {
   try {
-    const getFailedNotifications = await NotificationModel.get({ status: 'ERROR' })
-    console.log(getFailedNotifications);
-    // const response = await _sendNotification(getTemplateData, email)
-    return getFailedNotifications
+    const getFailedNotifications = await NotificationModel.get({ status: 'ERROR' }) 
+
+    const promises = getFailedNotifications.map((data) => {
+      const emailParams = { channel: 'EMAIL', data }
+
+      return DispatchModel.sendEmail(emailParams)
+    })
+
+    const promiseResult = await Promise.all(promises)
+    return promiseResult
   } catch(e) {
      console.error(e)
   }
-}
-
-async function _retryMechanism(params){
-
 }
 
 async function _sendNotification (data, email) {
@@ -67,5 +70,4 @@ async function sendEmailNotification(params){
   } catch(e) {
      console.error(e)
   }
-
 }

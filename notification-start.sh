@@ -27,10 +27,10 @@ export MONGO_READ_PREFERENCE="secondaryPreferred"
 
 #### CRON Configs
 export CRON_TIME_EMAIL_NOTIFICATION="0 0 * * *"
-export CRON_TIME_RETRY_NOTIFICATION="0/10 * * * * *"
+export CRON_TIME_RETRY_NOTIFICATION="0/10 * * * *"
 export CRON_TIME_ZONE='Asia/Kolkata'
 
 #npm run ip
 #npm run build
-#npm test
+npm test
 npm start
