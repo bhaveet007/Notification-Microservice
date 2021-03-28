@@ -1,0 +1,787 @@
+{
+	"id": "afd95791-f416-4330-810c-584a7deb8cbb",
+	"name": "NOTIFICATION_MS",
+	"description": null,
+	"auth": null,
+	"events": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "38dbe79c-7863-461a-8c14-52e23f342ccf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "76fd7944-e4e1-4fb8-90a5-16270f4875bb",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"5daf4afe-2bde-4c81-84cd-54df7eacc8d6",
+		"256559ad-153c-41c9-9a30-9efe6e84e243",
+		"4f46ea44-a145-4949-966e-2c74a3aee074"
+	],
+	"protocolProfileBehavior": {},
+	"folders": [
+		{
+			"id": "5daf4afe-2bde-4c81-84cd-54df7eacc8d6",
+			"name": "HOME",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "afd95791-f416-4330-810c-584a7deb8cbb",
+			"folder": null,
+			"order": [
+				"e64041dd-dd84-44c8-bc91-2daf4a912243",
+				"a33b4b5c-2c9c-4ded-b673-651cd2fadc12"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "256559ad-153c-41c9-9a30-9efe6e84e243",
+			"name": "NOTIFICATION",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "afd95791-f416-4330-810c-584a7deb8cbb",
+			"folder": null,
+			"order": [
+				"70501d05-8571-4647-8b9d-d2f9ebc0e3e1"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "4f46ea44-a145-4949-966e-2c74a3aee074",
+			"name": "NOTIFICATION-TEMPLATES",
+			"description": "",
+			"auth": null,
+			"events": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6124f14f-53ff-439e-8ac9-8635a880f028",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "667cf00b-5d6c-459f-8346-9261c87e7fb3",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"collection": "afd95791-f416-4330-810c-584a7deb8cbb",
+			"folder": null,
+			"order": [
+				"690ec48c-0246-441e-8fb1-5e72deaf94ab",
+				"6d36516c-96d0-43dc-9c2a-6e7a29f38c83",
+				"e900db0f-76b8-45fd-a1bd-8a4dff8cdbf4",
+				"67c6ca02-96b1-40fa-9e3f-1721d63ca68a",
+				"8bda66f4-0ed6-419b-b763-c9e41a6b4e69",
+				"4bd33fe4-605b-48b7-871c-426bcf1cce10"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"requests": [
+		{
+			"id": "4bd33fe4-605b-48b7-871c-426bcf1cce10",
+			"name": "{{NOTIFICATION_MS}}/notification-template/render",
+			"url": "{{NOTIFICATION_MS}}/notification-template/render",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4f46ea44-a145-4949-966e-2c74a3aee074",
+			"responses": [
+				{
+					"id": "e172d1c5-eac9-4a5d-b120-3909854c35cf",
+					"name": "NotificationTemplate_Render_Response",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"statusCode\": 200,\n    \"status\": \"OK\",\n    \"message\": \"Template loaded Successful\",\n    \"data\": \"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you  \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\"\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "f8084cb8-bc75-4e82-b0a7-06f5d0af0ec1",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "raw",
+						"url": "{{popeye}}/notification-template/render",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [],
+						"data": [],
+						"rawModeData": "{\n    \"templateId\": 224,\n    \"templateType\": \"EMAIL\",\n    \"locals\": {\n        \"userName\": \"VIKAS\"\n    }\n}"
+					},
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "273"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"111-+YkFEQBhpch+/ZrP/m6a44CyUIQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2020 15:08:27 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookies": [],
+					"request": "4bd33fe4-605b-48b7-871c-426bcf1cce10",
+					"collection": "afd95791-f416-4330-810c-584a7deb8cbb"
+				}
+			],
+			"rawModeData": "{\n    \"templateId\": 224,\n    \"templateType\": \"EMAIL\",\n    \"locals\": {\n        \"userName\": \"BHAVEET\"\n    }\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "67c6ca02-96b1-40fa-9e3f-1721d63ca68a",
+			"name": "{{NOTIFICATION_MS}}/notification-template/223/EMAIL",
+			"url": "{{NOTIFICATION_MS}}/notification-template/223/EMAIL",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PUT",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4f46ea44-a145-4949-966e-2c74a3aee074",
+			"responses": [
+				{
+					"id": "f917f2b4-ab92-44df-814f-255ee346d6be",
+					"name": "NotificationTemplate_Update_Response",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"statusCode\": 200,\n    \"status\": \"OK\",\n    \"message\": \"Template Update Successful\",\n    \"data\": {\n        \"createdAt\": \"1586181457997\",\n        \"isActive\": true,\n        \"_id\": \"5e8b429075420602bf4b9cad\",\n        \"templateId\": 223,\n        \"triggerName\": \"hello\",\n        \"templateName\": \"vikas\",\n        \"description\": \"hello_india\",\n        \"templateType\": \"EMAIL\",\n        \"templateBody\": \"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\",\n        \"updatedAt\": \"1586184848712\",\n        \"__v\": 0\n    }\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "ede81929-2574-4e12-9ccd-637fb0ca2401",
+						"method": "PUT",
+						"headers": "",
+						"dataMode": "raw",
+						"url": "http://localhost:8080/notification-template/223/EMAIL",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [],
+						"data": [],
+						"rawModeData": "{\n  \"triggerName\": \"hello\",\n  \"templateName\": \"vikas\",\n  \"description\": \"hello_india\",\n  \"templateType\": \"EMAIL\",\n  \"templateBody\":\"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\"\n}"
+					},
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "530"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"212-G4jSIFVnBDtuFwi+wkAzde3H5QA\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2020 15:00:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookies": [],
+					"request": "67c6ca02-96b1-40fa-9e3f-1721d63ca68a",
+					"collection": "afd95791-f416-4330-810c-584a7deb8cbb"
+				}
+			],
+			"rawModeData": "{\n  \"triggerName\": \"Payments\",\n  \"templateName\": \"Payment Successfull\",\n  \"description\": \"This template is for sending payment notification\",\n  \"templateType\": \"EMAIL\",\n  \"templateBody\":\"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi, Rs 999.00 deducted from your account 988844XXX.</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\"\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "690ec48c-0246-441e-8fb1-5e72deaf94ab",
+			"name": "{{NOTIFICATION_MS}}/notification-template",
+			"url": "{{NOTIFICATION_MS}}/notification-template",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4f46ea44-a145-4949-966e-2c74a3aee074",
+			"responses": [
+				{
+					"id": "09a5ae38-cf4f-4693-86e5-2b7156e19496",
+					"name": "notificationtemplate_create_reponse",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"statusCode\": 200,\n    \"status\": \"OK\",\n    \"message\": \"Template Created Successfully\",\n    \"data\": {\n        \"createdAt\": \"1586181457997\",\n        \"isActive\": true,\n        \"_id\": \"5e8b429075420602bf4b9cad\",\n        \"templateId\": 223,\n        \"triggerName\": \"vikas1234\",\n        \"templateName\": \"vikas\",\n        \"description\": \"hello\",\n        \"templateType\": \"EMAIL\",\n        \"templateBody\": \"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\",\n        \"updatedAt\": \"1586184848712\",\n        \"__v\": 0\n    }\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "5f00dc2c-caad-4ab3-bd05-cb37cdd73ed0",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "raw",
+						"url": "{{popeye}}/notification-template",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [],
+						"data": [],
+						"rawModeData": "{\n  \"templateId\": 223,\n  \"triggerName\": \"vikas1234\",\n  \"templateName\": \"vikas\",\n  \"description\": \"hello\",\n  \"templateType\": \"EMAIL\",\n  \"templateBody\":\"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\"\n}"
+					},
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "531"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"213-bLnBSyYrb/aVO3CsFTpvQm0c+ag\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2020 14:54:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookies": [],
+					"request": "690ec48c-0246-441e-8fb1-5e72deaf94ab",
+					"collection": "afd95791-f416-4330-810c-584a7deb8cbb"
+				},
+				{
+					"id": "a0623b3c-4e17-4887-a0e6-8c210939b7b4",
+					"name": "NotificationTemplate_Create_Response",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"statusCode\": 200,\n    \"status\": \"OK\",\n    \"message\": \"Template Created Successfully\",\n    \"data\": {\n        \"createdAt\": \"1586181457997\",\n        \"isActive\": true,\n        \"_id\": \"5e8b446775420602bf4b9caf\",\n        \"templateId\": 224,\n        \"triggerName\": \"Payment_Successfull\",\n        \"templateName\": \"Payment Successfull\",\n        \"description\": \"After payment completetion\",\n        \"templateType\": \"EMAIL\",\n        \"templateBody\": \"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\",\n        \"updatedAt\": \"1586185319772\",\n        \"__v\": 0\n    }\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "72942524-4889-4442-8529-b71f5c1729d8",
+						"method": "POST",
+						"headers": "",
+						"dataMode": "raw",
+						"url": "{{popeye}}/notification-template",
+						"dataOptions": {
+							"raw": {
+								"language": "json"
+							}
+						},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [],
+						"data": [],
+						"rawModeData": "{\n  \"templateId\": 224,\n  \"triggerName\": \"Payment_Successfull\",\n  \"templateName\": \"Payment Successfull\",\n  \"description\": \"After payment completetion\",\n  \"templateType\": \"EMAIL\",\n  \"templateBody\":\"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\"\n}"
+					},
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "576"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"240-sQdT26HDCySYiE2YfJnfauFmb5U\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2020 15:01:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookies": [],
+					"request": "690ec48c-0246-441e-8fb1-5e72deaf94ab",
+					"collection": "afd95791-f416-4330-810c-584a7deb8cbb"
+				}
+			],
+			"rawModeData": "{\n    \"templateId\": 226,\n    \"triggerName\": \"Product pitch\",\n    \"templateName\": \"Daily product pitch\",\n    \"description\": \"Notifications for products pitch\",\n    \"templateType\": \"EMAIL\",\n    \"templateBody\": \"Hi!!! TEST NOTIFICATION MICROSERVICE\"\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "6d36516c-96d0-43dc-9c2a-6e7a29f38c83",
+			"name": "{{NOTIFICATION_MS}}/notification-template/22/EMAIL",
+			"url": "{{NOTIFICATION_MS}}/notification-template/225/EMAIL",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4f46ea44-a145-4949-966e-2c74a3aee074",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "70501d05-8571-4647-8b9d-d2f9ebc0e3e1",
+			"name": "SEND NOTIFICATION",
+			"url": "{{NOTIFICATION_MS}}/dispatch/email",
+			"description": null,
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "256559ad-153c-41c9-9a30-9efe6e84e243",
+			"rawModeData": "{\n    \"channel\": \"EMAIL\",\n    \"data\": {\n        \"to\": [\n            \"bhaveetseekin14@gmail.com\"\n        ],\n        \"subject\": \"Email Subject\",\n        \"text\": \"Email Text Body\",\n        \"html\": \"HI!! This is test email\"\n    }\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "8bda66f4-0ed6-419b-b763-c9e41a6b4e69",
+			"name": "{{NOTIFICATION_MS}}/notification-template/224",
+			"url": "{{NOTIFICATION_MS}}/notification-template/224",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4f46ea44-a145-4949-966e-2c74a3aee074",
+			"responses": [
+				{
+					"id": "81d14125-119a-4c66-9eb2-ad3e8d634356",
+					"name": "NotificationTemplate_Delete_Response",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"statusCode\": 200,\n    \"status\": \"OK\",\n    \"message\": \"Template deleted Successful\",\n    \"data\": {\n        \"createdAt\": \"1586181457997\",\n        \"isActive\": false,\n        \"_id\": \"5e8b446775420602bf4b9caf\",\n        \"templateId\": 224,\n        \"triggerName\": \"Payment_Successfull\",\n        \"templateName\": \"Payment Successfull\",\n        \"description\": \"After payment completetion\",\n        \"templateType\": \"EMAIL\",\n        \"templateBody\": \"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\",\n        \"updatedAt\": \"1586185319772\",\n        \"__v\": 0\n    }\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "110b419b-77ae-475b-a9f2-edbf23d0df02",
+						"method": "DELETE",
+						"headers": "",
+						"url": "{{popeye}}/notification-template/224",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [],
+						"dataMode": null,
+						"data": null
+					},
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "575"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23f-P/Aqrez1J82ExKsK9TDtkYQ5opM\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2020 15:12:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookies": [],
+					"request": "8bda66f4-0ed6-419b-b763-c9e41a6b4e69",
+					"collection": "afd95791-f416-4330-810c-584a7deb8cbb"
+				}
+			],
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "a33b4b5c-2c9c-4ded-b673-651cd2fadc12",
+			"name": "HEALTH CHECK",
+			"url": "{{NOTIFICATION_MS}}/health-check",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "5daf4afe-2bde-4c81-84cd-54df7eacc8d6",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "e64041dd-dd84-44c8-bc91-2daf4a912243",
+			"name": "VERSION CHECK",
+			"url": "{{NOTIFICATION_MS}}/version",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "5daf4afe-2bde-4c81-84cd-54df7eacc8d6",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "e900db0f-76b8-45fd-a1bd-8a4dff8cdbf4",
+			"name": "{{NOTIFICATION_MS}/notification-template/",
+			"url": "{{NOTIFICATION_MS}}/notification-template/",
+			"description": null,
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "4f46ea44-a145-4949-966e-2c74a3aee074",
+			"responses": [
+				{
+					"id": "67729e79-1a6b-4f64-bc07-a615f6c729b5",
+					"name": "NotifiactionTemplate_GetList_Response",
+					"status": "OK",
+					"mime": "",
+					"language": "json",
+					"text": "{\n    \"statusCode\": 200,\n    \"status\": \"OK\",\n    \"message\": \"Template loaded Successful\",\n    \"data\": [\n        {\n            \"_id\": \"5e8b429075420602bf4b9cad\",\n            \"createdAt\": \"1586181457997\",\n            \"isActive\": true,\n            \"templateId\": 223,\n            \"triggerName\": \"vikas1234\",\n            \"templateName\": \"vikas\",\n            \"description\": \"hello\",\n            \"templateType\": \"EMAIL\",\n            \"templateBody\": \"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\",\n            \"updatedAt\": \"1586184848712\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"5e8b2b95c931940142cc1856\",\n            \"createdAt\": \"1586178902983\",\n            \"isActive\": true,\n            \"templateId\": 22,\n            \"triggerName\": \"vikas1234\",\n            \"templateName\": \"vikas\",\n            \"description\": \"hello\",\n            \"templateType\": \"EMAIL\",\n            \"templateBody\": \"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\",\n            \"updatedAt\": \"1586178965322\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"5e8b2b8ec931940142cc1855\",\n            \"createdAt\": \"1586178902983\",\n            \"isActive\": true,\n            \"templateId\": 21,\n            \"triggerName\": \"hello\",\n            \"templateName\": \"vikas\",\n            \"description\": \"hello\",\n            \"templateType\": \"EMAIL\",\n            \"templateBody\": \"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\",\n            \"updatedAt\": \"1586178958457\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"5e8b0bc4138c0efc6b81823d\",\n            \"createdAt\": \"1586170099897\",\n            \"isActive\": true,\n            \"templateId\": 12345,\n            \"triggerName\": \"vikas1234\",\n            \"templateName\": \"vikas\",\n            \"description\": \"hello\",\n            \"templateType\": \"EMAIL\",\n            \"templateBody\": \"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you <% userName %> \\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\",\n            \"updatedAt\": \"1586170820099\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"5e8ad64fbd83b7f4decc37a4\",\n            \"createdAt\": \"1586156920936\",\n            \"isActive\": true,\n            \"templateId\": 123,\n            \"triggerName\": \"vikas123\",\n            \"templateName\": \"vikas\",\n            \"description\": \"hello\",\n            \"templateType\": \"EMAIL\",\n            \"templateBody\": \"<html>\\n\\n\\t<head>\\n\\t</head>\\n\\t<body>\\n\\t\\t<div style=\\\"margin:0 auto;max-width:600px;\\\">\\n\\t\\t\\t<p>Hi,XYZ</br>\\n\\t\\tHow are you It's testing mail\\n\\t\\t</br></br>\\n\\t\\tThanks\\n\\t\\t</div>\\n\\t</body>\\n</html>\",\n            \"updatedAt\": \"1586157135139\",\n            \"__v\": 0\n        }\n    ]\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": ""
+					},
+					"requestObject": {
+						"id": "892bc412-025a-4c8c-99c5-69eff55a6bdc",
+						"method": "GET",
+						"headers": "",
+						"url": "{{popeye}}/notification-template/",
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [],
+						"dataMode": null,
+						"data": null
+					},
+					"headers": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2327"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"917-e1T7gP0WKEMQUD6Q8yYTe1+uOdk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 06 Apr 2020 14:56:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookies": [],
+					"request": "e900db0f-76b8-45fd-a1bd-8a4dff8cdbf4",
+					"collection": "afd95791-f416-4330-810c-584a7deb8cbb"
+				}
+			],
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
