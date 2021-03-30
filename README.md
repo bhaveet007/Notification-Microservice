@@ -19,5 +19,5 @@
 * STEP 6: Test cases and build scripts has been already added.
 
 #### Future Implementation
-**Validations**: validation at middleware level can be added using express-validator schema.
-**Throttling**: Can be implemented using Redis. (User can be blocked after n attempts in n hrs/mins/days)
+* **Validations**: validation at middleware level can be added using express-validator schema.
+* **Throttling**: Can be implemented using Redis. (User can be blocked after n attempts in n hrs/mins/days)
